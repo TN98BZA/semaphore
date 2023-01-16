@@ -1,0 +1,29 @@
+---
+- name: Übertragen der Playbooks
+  hosts: TZUBI-Linux
+  tasks:
+  - name: Install_Apache übertragen
+    fetch:
+      src=/AnsibleStuff/Install_Apache.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+  - name: Install_aptitude Übertragen
+    fetch:
+      src=/AnsibleStuff/install_aptitude.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+  - name: Reboot Übertragen
+    fetch:
+      src=/AnsibleStuff/Reboot.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+  - name: RHost_ssh_install Übertragen
+    fetch:
+      src=/AnsibleStuff/RHost_ssh_install.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+  - name: Update_All Übertragen
+    fetch:
+      src=/AnsibleStuff/Update_All.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+  - name: Update Übertragen
+    fetch:
+      src=/AnsibleStuff/Update.yml
+      dest=/usr/lib/python3/dist-packages/ansible/playbook
+...

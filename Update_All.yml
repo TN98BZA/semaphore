@@ -1,0 +1,11 @@
+---
+- name: apt update dist
+  hosts: Linux
+
+  tasks:
+  - name: Refresh package cache
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Update all apt packages
+    apt: upgrade=dist force_apt_get=yes    
+...

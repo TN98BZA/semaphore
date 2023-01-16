@@ -1,0 +1,34 @@
+---
+- name: Übertragen der Ansible Dateien
+  hosts: TZUBI
+  tasks:
+     - name: New AnsibleStuff Directory
+       file:
+         path:  /AnsibleStuff
+         state: directory
+         mode: 0755
+
+     - name: Install_Apache übertragen.
+       copy: src=Install_Apache.yml dest=/AnsibleStuff mode=777
+     - name: Update_all übertragen.
+       copy: src=Update_All.yml dest=/AnsibleStuff mode=777
+     - name: Update übertragen.
+       copy: src=Update.yml dest=/AnsibleStuff mode=777
+     - name: Reboot übertragen.
+       copy: src=Reboot.yml dest=/AnsibleStuff mode=777
+     - name: Install Aptitude übertragen
+       copy: src=install_aptitude.yml dest=/AnsibleStuff mode=777
+     - name: RHost_ssh_install übertragen.
+       copy: src=RHost_ssh_install.yml dest=/AnsibleStuff mode=777
+     - name: AnsibleConfig übertragen.
+       copy: src=/etc/ansible/ansible.cfg dest=/AnsibleStuff mode=777
+     - name: Ansible Hosts übertragen.
+       copy: src=/etc/ansible/hosts dest=/AnsibleStuff mode=777
+     - name: etc hosts übertragen.
+       copy: src=/etc/hosts dest=/AnsibleStuff mode=777
+     - name: SSHD config übertragen.
+       copy: src=/etc/shh/sshd_config dest=/AnsibleStuff mode=777    
+
+#     - name: Script ausführen.
+#       local_action: command sh /Scripte/Install_Openssh_Server.sh
+...

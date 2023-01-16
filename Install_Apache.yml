@@ -1,0 +1,8 @@
+---
+- name: Install Apache
+  hosts: TZUBI
+  tasks:
+  - name: Installation
+    apt:
+      name: 
+...
