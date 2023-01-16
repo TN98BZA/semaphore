@@ -1,0 +1,10 @@
+---
+- name:
+  hosts: Linux
+  tasks:
+    - name: New test directory
+      file:
+        path: /test
+        state: directory
+        mode: 0755
+...
