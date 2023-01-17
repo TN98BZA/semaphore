@@ -1,0 +1,7 @@
+---
+- name: Get timestamp
+  hosts: Linux
+  tasks:
+  - name: Get Date
+    command: date  
+...
