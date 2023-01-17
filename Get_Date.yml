@@ -2,7 +2,10 @@
 - name: Get timestamp
   hosts: Linux
   tasks:
-  - name: Get Date
+  - name: Get date
     debug:
      var=ansible_date_time.date
+  - name: Get time
+    debug:
+     var=ansible_date_time.time
 ...
