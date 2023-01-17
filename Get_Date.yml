@@ -8,6 +8,4 @@
   - name: Get time
     debug:
      var=ansible_date_time.time
-  - name: Get time
-    shell: date
 ...
