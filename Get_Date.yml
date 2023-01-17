@@ -3,5 +3,6 @@
   hosts: Linux
   tasks:
   - name: Get Date
-    command: date  
+    debug:
+     var=ansible_date_time.date
 ...
